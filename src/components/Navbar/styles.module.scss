@@ -1,0 +1,19 @@
+.container {
+  max-width: 45em;
+  display: flex;
+  gap: 1.8em;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.links {
+  color: #000000;
+  font-size: 1.2rem;
+  padding: 1.8em;
+  transition: 200ms;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #000000;
+  }
+}
