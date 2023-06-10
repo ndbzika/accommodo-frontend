@@ -1,7 +1,9 @@
-import { Title } from '@/components/Title';
+import { Description } from '@/components/Description';
 
 export default function Home() {
   return (
-    <Title />
+    <>
+      <Description />
+    </>
   )
 }
