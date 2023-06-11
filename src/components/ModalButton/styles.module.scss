@@ -11,3 +11,15 @@
   box-shadow: 24px;
   padding: 4px;
 }
+
+.button {
+  background-color: #000000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+
+  &:hover {
+    background-color: #464646;
+  }
+}

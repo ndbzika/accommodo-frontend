@@ -18,7 +18,7 @@ export const ListQuartos = () => {
         tipo={quarto.tipo}
         preco={quarto.preco} 
         status={quarto.status}
-        id={quarto.id}
+        id={Number(quarto.id)}
         key={quarto.id} />
       ))}
     </Box>
