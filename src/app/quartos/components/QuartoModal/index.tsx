@@ -1,13 +1,12 @@
 import { ModalButton } from '@/components/ModalButton'
 import { Autocomplete, Button, FormControl, InputAdornment, InputLabel, OutlinedInput, TextField, Typography } from '@mui/material'
 import {useQuartoData, QuartoStatusType, QuartoTipoType, QuartoTipo, QuartoStatus} from './useQuartoData'
+import AddIcon from '@mui/icons-material/Add';
 
 import styles from './styles.module.scss'
-import { useModal } from '@/hooks/useModal'
 
 
 export const QuartoModal = () => {
-  const { handleCloseModal } = useModal();
   const {quartoTipo,
         quartoNumero, 
         quartoPreco, 
@@ -20,7 +19,11 @@ export const QuartoModal = () => {
 
   return (
     <>
-      <ModalButton>
+      <ModalButton 
+      icon={
+        <AddIcon sx={{color: '#fff'}}/>
+      }
+      >
         <Typography variant='h3' className={styles.title} >Cadastrar quarto</Typography>
         
         <FormControl className={styles.form}>

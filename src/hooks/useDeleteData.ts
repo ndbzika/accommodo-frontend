@@ -1,7 +1,6 @@
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios'
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context';
-import { NextRouter, useRouter } from 'next/router';
 
 type useDeleteDataProps = {
   endpoint: string,

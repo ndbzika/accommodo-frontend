@@ -1,24 +1,25 @@
 'use client'
 
-type CustomModalProps = {
-  children: ReactNode
-}
 
 import { useModal } from '@/hooks/useModal'
 import { Box, Fab, Modal } from '@mui/material'
 import { ReactNode } from 'react'
-import AddIcon from '@mui/icons-material/Add';
 
 import styles from './styles.module.scss'
 
-export const ModalButton = ({children}: CustomModalProps) => {
+type CustomModalProps = {
+  children: ReactNode,
+  icon: ReactNode
+}
+
+export const ModalButton = ({children, icon}: CustomModalProps) => {
 
   const {isOpen, handleOpenModal ,handleCloseModal} = useModal();
 
   return (
     <>
       <Fab className={styles.button} onClick={handleOpenModal}>
-        <AddIcon sx={{color: '#fff'}}/>
+        {icon}
       </Fab>
       <Modal
       open={isOpen}

@@ -1,10 +1,11 @@
 import { usePostDataMutate } from '@/hooks/usePostDataMutate';
+import { useUpdateData } from '@/hooks/useUpdateData';
 import { QuartosData } from '@/interface/QuartosData';
 import { ChangeEventHandler, useState } from 'react'
 
 
 
-export const useQuartoData = () => {
+export const useQuartoData = (quartoId: number) => {
   const [quartoStatus, setQuartoStatus] = useState<QuartoStatusType | null>(null);
   const [quartoTipo, setQuartoTipo] = useState<QuartoTipoType | null>(null);
   const [quartoNumero, setQuartoNumero] = useState<number | null>(null);
@@ -22,15 +23,23 @@ export const useQuartoData = () => {
   }
 
   const { mutate } = usePostDataMutate();
-  const handleSumbitData = () => {
-    const data: QuartosData = {
-      numero: Number(quartoNumero),
-      preco: Number(quartoPreco),
-      status: String(quartoStatus?.status),
-      tipo: String(quartoTipo?.tipo)
-    }
+  const { updateMutation } = useUpdateData();
 
+  const data: QuartosData = {
+    numero: Number(quartoNumero),
+    preco: Number(quartoPreco),
+    status: String(quartoStatus?.status),
+    tipo: String(quartoTipo?.tipo)
+  }
+  const handleSumbitData = () => {
     mutate({endpoint: '/quartos', data: data})
+  }
+
+  const handleUpdateData = () => {
+    updateMutation.mutate({endpoint: '/quartos', id:quartoId, data: {
+      ...data,
+      id: data.id
+    }})
   }
 
   return {quartoStatus, 
@@ -41,7 +50,8 @@ export const useQuartoData = () => {
           handleChageQuartoTipo, 
           handleChangeQuartoNumero, 
           handleChangeQuartoPreco, 
-          handleSumbitData}
+          handleSumbitData,
+          handleUpdateData}
 }
 
 export interface QuartoStatusType {
