@@ -1,0 +1,28 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1200px;
+  width: 60%;
+  height: 50em;
+  background-color: #fff;;
+  border: 1px solid gray;
+  box-shadow: 24px;
+  padding: 4px;
+
+  .title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .updateModal {
+    max-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    gap: 4em;
+  }
+}

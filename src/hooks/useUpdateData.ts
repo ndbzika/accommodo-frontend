@@ -1,4 +1,4 @@
-import { useQuartoData } from '@/app/quartos/components/QuartoModal/useQuartoData';
+import { useQuartoData } from '@/app/quartos/useQuartoData';
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios'
 import { MouseEventHandler } from 'react';

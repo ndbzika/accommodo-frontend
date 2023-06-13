@@ -3,9 +3,7 @@ import { useUpdateData } from '@/hooks/useUpdateData';
 import { QuartosData } from '@/interface/QuartosData';
 import { ChangeEventHandler, useState } from 'react'
 
-
-
-export const useQuartoData = (quartoId: number) => {
+export const useQuartoData = (quartoId?: number) => {
   const [quartoStatus, setQuartoStatus] = useState<QuartoStatusType | null>(null);
   const [quartoTipo, setQuartoTipo] = useState<QuartoTipoType | null>(null);
   const [quartoNumero, setQuartoNumero] = useState<number | null>(null);
@@ -36,7 +34,7 @@ export const useQuartoData = (quartoId: number) => {
   }
 
   const handleUpdateData = () => {
-    updateMutation.mutate({endpoint: '/quartos', id:quartoId, data: {
+    updateMutation.mutate({endpoint: '/quartos', id:Number(quartoId), data: {
       ...data,
       id: data.id
     }})

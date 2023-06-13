@@ -1,3 +1,4 @@
+import { HospedeData } from '@/interface/HospedesData';
 import { QuartosData } from '@/interface/QuartosData';
 import { useQuery } from '@tanstack/react-query';
 import axios, { AxiosResponse } from 'axios'
@@ -8,7 +9,7 @@ type DataProps = {
 
 const API_URL = 'http://localhost:8080';
 
-const getData = async (endpoint:string): Promise<AxiosResponse<QuartosData[]>> => {
+const getData = async (endpoint:string): Promise<AxiosResponse<any[]>> => {
   const res = axios.get(API_URL + endpoint);
   return res;
 }

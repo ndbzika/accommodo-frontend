@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 import styles from './styles.module.scss'
 import { useModal } from '@/hooks/useModal'
-import { useQuartoData, QuartoStatusType, QuartoTipoType, QuartoTipo, QuartoStatus } from '../components/QuartoModal/useQuartoData'
+import { useQuartoData, QuartoStatusType, QuartoTipoType, QuartoTipo, QuartoStatus } from '../useQuartoData'
 import { useUpdateData } from '@/hooks/useUpdateData'
 
 type PageProps = {
