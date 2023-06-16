@@ -1,4 +1,3 @@
-import { useDeleteData } from '@/hooks/useDeleteData';
 import { usePostDataMutate } from '@/hooks/usePostDataMutate';
 import { useUpdateData } from '@/hooks/useUpdateData';
 import { HospedeData } from '@/interface/HospedesData';
@@ -14,10 +13,10 @@ export const useHospedeData = (hospedeId ?:number) => {
   const handleSetNomeHospede: ChangeEventHandler<HTMLInputElement> = (event: any) => {
     setNomeHospede(event.target.value)
   }
-  const handleSetEmailHospede = (event: any) => {
+  const handleSetEmailHospede: ChangeEventHandler<HTMLInputElement> = (event: any) => {
     setEmailHospede(event.target.value);
   }
-  const handleSetTelefoneHospede = (event: any) => {
+  const handleSetTelefoneHospede: ChangeEventHandler<HTMLInputElement> = (event: any) => {
     setTelefoneHospede(event.target.value);
   }
 

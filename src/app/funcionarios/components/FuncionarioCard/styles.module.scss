@@ -1,0 +1,11 @@
+.funcionarioInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em;
+
+  .nome {
+    font-weight: 900;
+    max-width: 40vw;
+  }
+}
