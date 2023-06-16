@@ -8,9 +8,7 @@ type useDeleteDataProps = {
   router: AppRouterInstance
 }
 
-
-
-const API_URL = 'https://accommodo-api.up.railway.app/';
+const API_URL = 'https://accommodo-api.up.railway.app';
 
 const deleteData = async (endponit: string, id: number) => {
   try {

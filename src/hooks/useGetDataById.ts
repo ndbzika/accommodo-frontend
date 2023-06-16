@@ -6,7 +6,7 @@ type DataProps = {
   id: string
 }
 
-const API_URL = 'https://accommodo-api.up.railway.app/';
+const API_URL = 'https://accommodo-api.up.railway.app';
 
 const getData = async (endpoint:string, id:string): Promise<AxiosResponse<any>> => {
   const res = axios.get(API_URL + endpoint + id);
@@ -20,7 +20,6 @@ export const useGetDataById = ({ endpoint = '', id = ''}: DataProps) => {
     retry: 2
   })
   
-
   return {
     ...query,
     data: query.data?.data

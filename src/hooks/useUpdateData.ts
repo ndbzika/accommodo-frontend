@@ -7,7 +7,7 @@ type useUpdateDataProps = {
   data: object
 }
 
-const API_URL = 'https://accommodo-api.up.railway.app/';
+const API_URL = 'https://accommodo-api.up.railway.app';
 
 const updateData = async (endponit: string, id: number, data: object) => {
   try {
@@ -21,7 +21,6 @@ const updateData = async (endponit: string, id: number, data: object) => {
     console.log('Update error', error);
     throw new Error('Erro ao atualizar os dados');
   }
-  
 }
 
 export const useUpdateData = () => {
