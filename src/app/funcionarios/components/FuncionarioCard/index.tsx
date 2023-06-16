@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import { FuncionarioData } from '@/interface/FuncionariosData';
+import { FuncionarioData } from '../../../../interface/FuncionariosData';
 import Image from 'next/image'
 
 import styles from './styles.module.scss';

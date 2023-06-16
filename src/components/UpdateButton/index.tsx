@@ -2,8 +2,6 @@ import { Button } from '@mui/material'
 import { MouseEventHandler } from 'react'
 import UpdateIcon from '@mui/icons-material/Update';
 
-import styles from './styles.module.scss'
-
 type UpdateButtonProps = {
   id: number | null,
   onClick: MouseEventHandler<HTMLButtonElement>

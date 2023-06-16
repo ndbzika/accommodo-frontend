@@ -1,8 +1,8 @@
 'use client'
 
-import { QuartoCard } from '@/app/quartos/components/QuartoCard';
-import { useGetData } from '@/hooks/useGetData'
-import { QuartosData } from '@/interface/QuartosData';
+import { QuartoCard } from '../QuartoCard';
+import { useGetData } from '../../../../hooks/useGetData'
+import { QuartosData } from '../../../../interface/QuartosData';
 import { Box } from '@mui/material';
 
 import styles from './styles.module.scss'

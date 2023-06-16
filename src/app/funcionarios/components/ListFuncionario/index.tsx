@@ -3,8 +3,8 @@
 import Grid from '@mui/material/Unstable_Grid2'
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-import { useGetData } from '@/hooks/useGetData';
-import { FuncionarioData } from '@/interface/FuncionariosData';
+import { useGetData } from '../../../../hooks/useGetData';
+import { FuncionarioData } from '../../../../interface/FuncionariosData';
 import { FuncionarioCard } from '../FuncionarioCard';
 
 import styles from './styles.module.scss'

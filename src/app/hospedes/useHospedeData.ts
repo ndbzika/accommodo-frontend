@@ -1,6 +1,6 @@
-import { usePostDataMutate } from '@/hooks/usePostDataMutate';
-import { useUpdateData } from '@/hooks/useUpdateData';
-import { HospedeData } from '@/interface/HospedesData';
+import { usePostDataMutate } from '../../hooks/usePostDataMutate';
+import { useUpdateData } from '../../hooks/useUpdateData';
+import { HospedeData } from '../../interface/HospedesData';
 import { ChangeEventHandler, useState } from 'react'
 
 export const useHospedeData = (hospedeId ?:number) => {

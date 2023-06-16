@@ -1,6 +1,6 @@
 'use client'
 
-import { ModalButton } from '@/components/ModalButton'
+import { ModalButton } from '../../../../components/ModalButton'
 import { Box, Button, TextField, Typography } from '@mui/material'
 import AddIcon from '@mui/icons-material/Add';
 import { useHospedeData } from '../../useHospedeData';

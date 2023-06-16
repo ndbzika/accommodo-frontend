@@ -2,13 +2,13 @@
 
 import { TableContainer, Paper, Table, TableHead, TableCell, TableRow, TableBody, Typography, Box, TextField, Button, Modal } from '@mui/material'
 import { useHospedeData } from '../../useHospedeData'
-import { useGetData } from '@/hooks/useGetData';
-import { HospedeData } from '@/interface/HospedesData';
-import { UpdateButton } from '@/components/UpdateButton';
-import { DeleteButton } from '@/components/DeleteButton';
-import { useDeleteData } from '@/hooks/useDeleteData';
+import { useGetData } from '../../../../hooks/useGetData';
+import { HospedeData } from '../../../../interface/HospedesData';
+import { UpdateButton } from '../../../../components/UpdateButton';
+import { DeleteButton } from '../../../../components/DeleteButton';
+import { useDeleteData } from '../../../../hooks/useDeleteData';
 import { useRouter } from 'next/navigation';
-import { useModal } from '@/hooks/useModal';
+import { useModal } from '../../../../hooks/useModal';
 
 import styles from './styles.module.scss'
 

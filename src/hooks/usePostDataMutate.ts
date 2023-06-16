@@ -6,7 +6,7 @@ type DataProps = {
   data: object
 }
 
-const API_URL = 'http://localhost:8080';
+const API_URL = 'https://accommodo-api.up.railway.app/';
 
 const postData = async (endpoint:string, data: object): Promise<any> => {
   const res = axios.post(API_URL + endpoint, data);

@@ -1,7 +1,7 @@
 'use client'
 
 
-import { useModal } from '@/hooks/useModal'
+import { useModal } from '../../hooks/useModal'
 import { Box, Fab, Modal } from '@mui/material'
 import { ReactNode } from 'react'
 

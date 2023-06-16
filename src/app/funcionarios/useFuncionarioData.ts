@@ -1,6 +1,6 @@
-import { usePostDataMutate } from '@/hooks/usePostDataMutate';
-import { useUpdateData } from '@/hooks/useUpdateData';
-import { FuncionarioData } from '@/interface/FuncionariosData';
+import { usePostDataMutate } from '../../hooks/usePostDataMutate';
+import { useUpdateData } from '../../hooks/useUpdateData';
+import { FuncionarioData } from '../../interface/FuncionariosData';
 import { ChangeEventHandler, useState } from 'react';
 
 export const useFuncionarioData = (funcionarioId?:number) => {

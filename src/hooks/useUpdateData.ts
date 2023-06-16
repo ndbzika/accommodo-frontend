@@ -1,7 +1,5 @@
-import { useQuartoData } from '@/app/quartos/useQuartoData';
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios'
-import { MouseEventHandler } from 'react';
 
 type useUpdateDataProps = {
   endpoint: string,
@@ -9,9 +7,7 @@ type useUpdateDataProps = {
   data: object
 }
 
-
-
-const API_URL = 'http://localhost:8080';
+const API_URL = 'https://accommodo-api.up.railway.app/';
 
 const updateData = async (endponit: string, id: number, data: object) => {
   try {
@@ -27,8 +23,6 @@ const updateData = async (endponit: string, id: number, data: object) => {
   }
   
 }
-
-
 
 export const useUpdateData = () => {
   const updateMutation = useMutation(

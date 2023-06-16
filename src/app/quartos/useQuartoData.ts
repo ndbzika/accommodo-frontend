@@ -1,6 +1,6 @@
-import { usePostDataMutate } from '@/hooks/usePostDataMutate';
-import { useUpdateData } from '@/hooks/useUpdateData';
-import { QuartosData } from '@/interface/QuartosData';
+import { usePostDataMutate } from '../../hooks/usePostDataMutate';
+import { useUpdateData } from '../../hooks/useUpdateData';
+import { QuartosData } from '../../interface/QuartosData';
 import { ChangeEventHandler, useState } from 'react'
 
 export const useQuartoData = (quartoId?: number) => {

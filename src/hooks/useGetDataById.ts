@@ -1,4 +1,3 @@
-import { QuartosData } from '@/interface/QuartosData';
 import { useQuery } from '@tanstack/react-query';
 import axios, { AxiosResponse } from 'axios';
 
@@ -7,9 +6,9 @@ type DataProps = {
   id: string
 }
 
-const API_URL = 'http://localhost:8080';
+const API_URL = 'https://accommodo-api.up.railway.app/';
 
-const getData = async (endpoint:string, id:string): Promise<AxiosResponse<QuartosData>> => {
+const getData = async (endpoint:string, id:string): Promise<AxiosResponse<any>> => {
   const res = axios.get(API_URL + endpoint + id);
   return res;
 }

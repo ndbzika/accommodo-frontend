@@ -1,5 +1,5 @@
-import { Navbar } from '@/components/Navbar'
-import { Title } from '@/components/Title'
+import { Navbar } from '../components/Navbar'
+import { Title } from '../components/Title'
 import Providers from './providers'
 
 import '../../styles/global.scss'

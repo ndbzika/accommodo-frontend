@@ -10,7 +10,7 @@ type useDeleteDataProps = {
 
 
 
-const API_URL = 'http://localhost:8080';
+const API_URL = 'https://accommodo-api.up.railway.app/';
 
 const deleteData = async (endponit: string, id: number) => {
   try {

@@ -1,4 +1,4 @@
-import { ModalButton } from '@/components/ModalButton'
+import { ModalButton } from '../../../../components/ModalButton'
 import { Autocomplete, Button, FormControl, InputAdornment, InputLabel, OutlinedInput, TextField, Typography } from '@mui/material'
 import {useQuartoData, QuartoStatusType, QuartoTipoType, QuartoTipo, QuartoStatus} from '../../useQuartoData'
 import AddIcon from '@mui/icons-material/Add';
