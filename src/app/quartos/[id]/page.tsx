@@ -1,17 +1,16 @@
 'use client'
 
-import { useGetDataById } from '@/hooks/useGetDataById'
+import { useGetDataById } from '../../../hooks/useGetDataById'
 import { Autocomplete, Box, Button, Container, FormControl, InputAdornment, InputLabel, Modal, OutlinedInput, TextField, Typography } from '@mui/material'
-import { DeleteButton } from '@/components/DeleteButton'
-import { useDeleteData } from '@/hooks/useDeleteData'
+import { DeleteButton } from '../../../components/DeleteButton'
+import { useDeleteData } from '../../../hooks/useDeleteData'
 import { useRouter } from 'next/navigation';
-import { UpdateButton } from '@/components/UpdateButton'
+import { UpdateButton } from '../../../components/UpdateButton'
 import Image from 'next/image'
 
 import styles from './styles.module.scss'
-import { useModal } from '@/hooks/useModal'
+import { useModal } from '../../../hooks/useModal'
 import { useQuartoData, QuartoStatusType, QuartoTipoType, QuartoTipo, QuartoStatus } from '../useQuartoData'
-import { useUpdateData } from '@/hooks/useUpdateData'
 
 type PageProps = {
   params: {
