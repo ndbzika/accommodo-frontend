@@ -12,15 +12,15 @@
   padding: 4px;
 }
 
-.button {
-  min-width: 40px;
-  background-color: #000000;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
+.addButton {
+  min-width: 40px !important; 
+  background-color: #000000 !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 999 !important;
 
   &:hover {
-    background-color: #464646;
+    background-color: #464646 !important;
   }
 }

@@ -18,7 +18,7 @@ export const ModalButton = ({children, icon}: CustomModalProps) => {
 
   return (
     <>
-      <Fab className={styles.button} onClick={handleOpenModal}>
+      <Fab className={styles.addButton} onClick={handleOpenModal}>
         {icon}
       </Fab>
       <Modal
