@@ -75,7 +75,7 @@ export default function Page({ params }: PageProps) {
         
             <FormControl className={styles.form}>
               <TextField 
-              value={quartoNumero || data?.numero}
+              value={quartoNumero}
               onChange={handleChangeQuartoNumero}
               type='number'
               fullWidth
@@ -111,7 +111,7 @@ export default function Page({ params }: PageProps) {
               <OutlinedInput
               id='outlined-adornment-amount'
               type='number'
-              value={quartoPreco || data?.preco}
+              value={quartoPreco}
               onChange={handleChangeQuartoPreco}
               startAdornment={<InputAdornment position='start'>R$</InputAdornment>}
               label='Preço'

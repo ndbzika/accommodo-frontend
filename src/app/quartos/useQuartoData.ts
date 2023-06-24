@@ -2,6 +2,7 @@ import { usePostDataMutate } from '../../hooks/usePostDataMutate';
 import { useUpdateData } from '../../hooks/useUpdateData';
 import { QuartosData } from '../../interface/QuartosData';
 import { ChangeEventHandler, useState } from 'react'
+import { useRouter } from 'next/navigation';
 
 export const useQuartoData = (quartoId?: number) => {
   const [quartoStatus, setQuartoStatus] = useState<QuartoStatusType | null>(null);
@@ -11,17 +12,19 @@ export const useQuartoData = (quartoId?: number) => {
   
   const handleChageQuartoStatus = (event:any, value: QuartoStatusType | null) => setQuartoStatus(value); 
   const handleChageQuartoTipo = (event:any, value: QuartoTipoType | null) => setQuartoTipo(value);
-  const handleChangeQuartoNumero:ChangeEventHandler<HTMLInputElement> = (event:any) => {
+  const handleChangeQuartoNumero:ChangeEventHandler<HTMLInputElement> = (event:any, value?:number) => {
     const newNumber = parseFloat(event.target.value);
-    setQuartoNumero(newNumber);
+    setQuartoNumero(newNumber ?? value);
   }
-  const handleChangeQuartoPreco:ChangeEventHandler<HTMLInputElement>  = (event:any) => {
+  const handleChangeQuartoPreco:ChangeEventHandler<HTMLInputElement>  = (event:any, value?:number) => {
     const newPreco = parseFloat(event.target.value);
-    setQuartoPreco(newPreco);
+    setQuartoPreco(newPreco ?? value);
   }
 
   const { mutate } = usePostDataMutate();
   const { updateMutation } = useUpdateData();
+
+  const router = useRouter();
 
   const data: QuartosData = {
     numero: Number(quartoNumero),
@@ -31,6 +34,7 @@ export const useQuartoData = (quartoId?: number) => {
   }
   const handleSumbitData = () => {
     mutate({endpoint: '/quartos', data: data})
+    router.refresh()
   }
 
   const handleUpdateData = () => {
@@ -38,6 +42,7 @@ export const useQuartoData = (quartoId?: number) => {
       ...data,
       id: data.id
     }})
+    router.refresh()
   }
 
   return {quartoStatus, 

@@ -25,7 +25,7 @@ export const ListHospedes = () => {
 
   const { data } = useGetData({ endpoint: '/hospedes' });
 
-  const {deleteMutation, handleDeleteData} = useDeleteData({
+  const { handleDeleteData } = useDeleteData({
     endpoint: '/hospedes',
     id: deleteHospedeId,
     router: router
