@@ -23,12 +23,13 @@ export const ListFuncionario = () => {
 
   return (
     <>
-      <Grid container spacing={5}>
+      <Grid container spacing={5} component='div' className={styles.container}>
         {Array.isArray(data) && 
         data.map((funcionario: FuncionarioData) => (
           <Grid key={funcionario.id}>
             <Item>
               <FuncionarioCard 
+              id={funcionario.id}
               nome={funcionario.nome} 
               email={funcionario.email} 
               cargo={funcionario.cargo}

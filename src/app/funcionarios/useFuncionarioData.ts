@@ -1,7 +1,9 @@
+import { useRouter } from 'next/navigation';
+import { useDeleteData } from '../../hooks/useDeleteData';
 import { usePostDataMutate } from '../../hooks/usePostDataMutate';
 import { useUpdateData } from '../../hooks/useUpdateData';
 import { FuncionarioData } from '../../interface/FuncionariosData';
-import { ChangeEventHandler, useState } from 'react';
+import { ChangeEventHandler, MouseEvent, useState } from 'react';
 
 export const useFuncionarioData = (funcionarioId?:number) => {
   const [nomeFuncionario, setNomeFuncionario] = useState<string | null>(null);
@@ -10,6 +12,10 @@ export const useFuncionarioData = (funcionarioId?:number) => {
   const [cargoFuncionario, setCargoFuncionario] = useState(null);
   const [salarioFuncionario, setSalarioFuncionario] = useState(null);
   const [deleteFuncionarioId, setDeleteFuncionarioId] = useState<number | null>(null);
+  const [openPopper, setOpenPopper] = useState(false);
+  const [popperAnchor, setPopperAnchor] = useState<null | HTMLElement>(null)
+
+  const router = useRouter();
 
   const handleSetNomeFuncionario: ChangeEventHandler<HTMLInputElement> = (event: any) => {
     setNomeFuncionario(event.target.value)
@@ -26,6 +32,10 @@ export const useFuncionarioData = (funcionarioId?:number) => {
   const handleSetSalarioFuncionario: ChangeEventHandler<HTMLInputElement> = (event: any) => {
     setSalarioFuncionario(event.target.value)
   } 
+  const handleSetPopper = (event: MouseEvent<HTMLElement>) => {
+    setPopperAnchor(popperAnchor ? null : event.currentTarget)
+    setOpenPopper((state) => !state)
+  }
 
   const { mutate } = usePostDataMutate();
   const { updateMutation } = useUpdateData();
@@ -46,18 +56,26 @@ export const useFuncionarioData = (funcionarioId?:number) => {
   }
 
   const handleUpdateData = () => {
-    updateMutation.mutate({endpoint: '/funcionarios', id:Number(funcionarioId), data: {
+    updateMutation.mutate({endpoint: '/funcionarios', id:Number(funcionarioId), data: {    
       ...data,
       id: data.id
     }})
   }
 
-
+  const {handleDeleteData} = useDeleteData({
+    endpoint: '/funcionarios',
+    id: deleteFuncionarioId,
+    router: router
+  });
 
   return {  nomeFuncionario, handleSetNomeFuncionario,
             emailFuncionario, handleSetEmailFuncionario,
             telefoneFuncionario, handleSetTelefoneFuncionario,
             cargoFuncionario, handleSetCargoFuncionario,
-            salarioFuncionario, handleSetSalarioFuncionario 
+            salarioFuncionario, handleSetSalarioFuncionario,
+            openPopper, handleSetPopper,
+            popperAnchor,
+            handleSubmitData, handleUpdateData , handleDeleteData,
+            setDeleteFuncionarioId
          }
 }

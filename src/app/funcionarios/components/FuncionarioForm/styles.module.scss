@@ -1,4 +1,4 @@
-.child {
+.child  {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -6,8 +6,7 @@
   max-width: 1200px;
   width: 60%;
   height: 50em;
-  background-color: #fff;;
-  border: 1px solid gray;
+  background-color: #fff;
   box-shadow: 24px;
   padding: 4px;
   display: flex !important;
@@ -15,16 +14,20 @@
   justify-content: center !important;
   align-items: center !important;
 }
+.title {
+  margin-top: -4em;
+  margin-bottom: 2em;
+}
 
-.addButton {
-  min-width: 40px !important; 
-  background-color: #000000 !important;
-  position: fixed !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  z-index: 999 !important;
+.form {
+  max-height: 20em;
+  height: 100%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
 
-  &:hover {
-    background-color: #464646 !important;
+  .input {
+    margin: 0.5em;
+    padding: 5px;
   }
 }
