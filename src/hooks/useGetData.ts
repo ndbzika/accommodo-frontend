@@ -15,7 +15,7 @@ const getData = async (endpoint:string): Promise<AxiosResponse<any[]>> => {
 export const useGetData = ({ endpoint = ''}: DataProps) => {
   const query = useQuery({
     queryFn: () => getData(endpoint),
-    queryKey: ['data-query'],
+    queryKey: [`data-query-${endpoint}`],
     retry: 2
   })
   

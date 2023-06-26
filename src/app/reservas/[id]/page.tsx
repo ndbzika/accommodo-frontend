@@ -63,9 +63,9 @@ export default function ReservaId({ params }: PageProps) {
         <Typography>
           Tempo:
           <Typography component='span'>
-            {formatDate(data?.dataInicio.toString())}
+            {formatDate(data?.dataInicio?.toString())}
             -
-            {formatDate(data?.dataFim.toString())}
+            {formatDate(data?.dataFim?.toString())}
             </Typography>
         </Typography>
         <Box>

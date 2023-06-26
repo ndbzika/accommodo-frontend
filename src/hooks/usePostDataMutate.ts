@@ -8,7 +8,10 @@ type DataProps = {
 
 const API_URL = 'https://accommodo-api.up.railway.app';
 
+let myendpoint: string;
+
 const postData = async (endpoint:string, data: object): Promise<any> => {
+  myendpoint = endpoint
   const res = axios.post(API_URL + endpoint, data);
   return res;
 }
@@ -19,7 +22,7 @@ export const usePostDataMutate = () => {
     mutationFn: async ({endpoint, data}: DataProps) => postData(endpoint, data),
     retry: 2,
     onSuccess: () => {
-      queryClient.invalidateQueries(['data-query'])
+      queryClient.invalidateQueries([`data-query-${myendpoint}`])
     }
   })
   

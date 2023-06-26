@@ -22,7 +22,8 @@ export const ListReservas = () => {
       className={styles.container}
       >
         <>       
-          {Array.isArray(data) 
+          {data ?
+          Array.isArray(data) 
           &&
           data.map((reserva: ReservasData) => (
             <Grid key={reserva.id}>
@@ -36,7 +37,11 @@ export const ListReservas = () => {
               status={reserva.status}
               />
             </Grid>
-          ))}
+          ))
+
+          :
+            <h1>NEHUMA RESERVA CADASTRADA</h1>
+          }
       </>
       </Grid>
     </>
