@@ -1,0 +1,18 @@
+.container {
+  min-width: 15em !important;
+  padding: 1em !important;
+  background-color: #00aeff !important;
+  color: #ffffff !important;
+  transition: transform 600ms !important;
+  transform: translateY(0) scale(1) !important;
+
+  &:hover {
+    transition: transform 600ms !important;
+    transform: translateY(5px) scale(1.01) !important;
+    background-color: #009ce4 !important;
+  }
+
+  .title {
+    text-shadow: 1px 1px #000;
+  }
+}

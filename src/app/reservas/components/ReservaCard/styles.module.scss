@@ -1,0 +1,23 @@
+.card {
+  min-width: 20em;
+  width: 100%;
+
+  .cardTop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dotDivider {
+      margin: 5px;
+    }
+  }
+
+  .idsDiv {
+    padding: 1em;
+  }
+
+  .date {
+    padding-left: 1em;
+  }
+}

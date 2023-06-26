@@ -1,0 +1,44 @@
+.conatiner {
+  min-width: 40em !important;
+  height: 30em !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+
+  .statusAtivo {
+    padding: 1em;
+    background-color: green;
+    color: #fff;
+  }
+
+  .statusEmAndamento {
+    padding: 1em;
+    background-color: #e5ff00;
+    color: #000;
+  }
+
+  .statusCancelado {
+    padding: 1em;
+    background-color: #ff2a2a;
+    color: #fff;
+  }
+}
+
+.modalChildren {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1200px;
+  width: 60%;
+  height: 50em;
+  background-color: #fff;;
+  border: 1px solid gray;
+  box-shadow: 24px;
+  padding: 4px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
