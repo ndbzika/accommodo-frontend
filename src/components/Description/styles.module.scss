@@ -1,16 +1,16 @@
 .description {
-  max-width: 27em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1em;
-  padding: 5%;
-  text-align: center;
-  font-size: 1.2rem;
+  max-width: 27em !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 1em !important;
+  padding: 5% !important;
+  text-align: center !important;
+  font-size: 1.2rem !important;
 
   .link {
-    text-decoration: underline;
-    color: #387dff;
-    font-size: 1.1rem;
+    text-decoration: underline !important;
+    color: #387dff !important;
+    font-size: 1.1rem !important;
   }
 }
