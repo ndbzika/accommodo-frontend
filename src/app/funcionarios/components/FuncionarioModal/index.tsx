@@ -11,9 +11,7 @@ export const FuncionarioModal = () => {
     icon={
       <GroupAddIcon sx={{color: '#fff'}}/>
     }>
-      <>
-        <FuncionarioForm action='Cadastrar' />
-      </>
+      <FuncionarioForm action='Cadastrar' />
     </ModalButton>
   )
 }

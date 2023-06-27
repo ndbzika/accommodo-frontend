@@ -8,38 +8,32 @@ import { FuncionarioData } from '../../../../interface/FuncionariosData';
 import { FuncionarioCard } from '../FuncionarioCard';
 
 import styles from './styles.module.scss'
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(5),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-  display: 'flex',
-}));
+import { Container } from '@mui/material';
 
 export const ListFuncionario = () => {
   const {data} = useGetData({endpoint:'/funcionarios'});
 
   return (
-    <>
-      <Grid container spacing={5} component='div' className={styles.container}>
+    <Container component='section' className={styles.container}>
+      <Grid 
+      container 
+      spacing={{ xs: 2, md: 3 }} 
+      columns={{ xs: 4, sm: 8, md: 12 }}
+      >
         {Array.isArray(data) && 
         data.map((funcionario: FuncionarioData) => (
-          <Grid key={funcionario.id}>
-            <Item>
-              <FuncionarioCard 
-              id={funcionario.id}
-              nome={funcionario.nome} 
-              email={funcionario.email} 
-              cargo={funcionario.cargo}
-              telefone={funcionario.telefone}
-              salario={funcionario.salario}
+          <Grid key={funcionario.id}>           
+            <FuncionarioCard 
+            id={funcionario.id}
+            nome={funcionario.nome} 
+            email={funcionario.email} 
+            cargo={funcionario.cargo}
+            telefone={funcionario.telefone}
+            salario={funcionario.salario}
             />
-            </Item>
           </Grid>
         ))}
       </Grid>
-    </>
+    </Container>
   )
 }

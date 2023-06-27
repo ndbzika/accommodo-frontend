@@ -26,74 +26,77 @@ export const FuncionarioForm = ({ action='',id = null }: FormProps) => {
           {action} funcionário
         </Typography>
 
-        <Grid 
-        container 
-        component='form' 
-        className={styles.form}
-        spacing={2}
-        >
-
-          <Grid xs={8}>
-            <FormControl>
-              <InputLabel htmlFor='nome-funcionario'>Nome</InputLabel>
-              <Input
-              required
-              value={nomeFuncionario}
-              onChange={handleSetNomeFuncionario}
-              id='nome-funcionario'
-              className={styles.input}
-              />
-            </FormControl>
+        <Box className={styles.form} component='form'>
+          <Grid
+          container
+          spacing={{ xs: 2, md: 3 }} 
+          columns={{ xs: 4, sm: 8, md: 12 }}
+          className={styles.grid}
+          >
+            <Grid xs={8}>
+              <FormControl>
+                <InputLabel htmlFor='nome-funcionario'>Nome</InputLabel>
+                <Input
+                required
+                value={nomeFuncionario}
+                onChange={handleSetNomeFuncionario}
+                id='nome-funcionario'
+                className={styles.input}
+                />
+              </FormControl>
           
-            <FormControl>
-              <InputLabel htmlFor='email-funcionario'>Email</InputLabel>
-              <Input
-              required
-              value={emailFuncionario}
-              onChange={handleSetEmailFuncionario}
-              id='email-funcionario'
-              className={styles.input}
-              type='email'
-              />
-            </FormControl>
+              <FormControl>
+                <InputLabel htmlFor='email-funcionario'>Email</InputLabel>
+                <Input
+                required
+                value={emailFuncionario}
+                onChange={handleSetEmailFuncionario}
+                id='email-funcionario'
+                className={styles.input}
+                placeholder='email@email.com'
+                type='email'
+                />
+              </FormControl>
           
-            <FormControl>
-              <InputLabel htmlFor='telefone-funcionario'>Telefone</InputLabel>
-              <Input
-              required
-              value={telefoneFuncionario}
-              onChange={handleSetTelefoneFuncionario}
-              id='telefone-funcionario'
-              className={styles.input}
-              />
-            </FormControl>
+              <FormControl>
+                <InputLabel htmlFor='telefone-funcionario'>Telefone</InputLabel>
+                <Input
+                required
+                value={telefoneFuncionario}
+                onChange={handleSetTelefoneFuncionario}
+                id='telefone-funcionario'
+                placeholder='(xx) xxxx-xxxx'
+                className={styles.input}
+                />
+              </FormControl>
+            </Grid>
+          
+            <Grid xs={6}>
+              <FormControl>
+                <InputLabel htmlFor='cargo-funcionario'>Cargo</InputLabel>
+                <Input
+                required
+                value={cargoFuncionario}
+                onChange={handleSetCargoFuncionario}
+                id='cargo-funcionario'
+                className={styles.input}
+                />
+              </FormControl>
+              <FormControl>
+                <InputLabel htmlFor='salario-funcionario'>Salario</InputLabel>
+                <Input
+                required
+                value={salarioFuncionario}
+                onChange={handleSetSalarioFuncionario}
+                id='salario-funcionario'
+                placeholder='Ex.: 1500'
+                className={styles.input}
+                type='number'
+                />
+              </FormControl>
+            </Grid>
           </Grid>
-        
-          <Grid xs={6}>
-            <FormControl>
-              <InputLabel htmlFor='cargo-funcionario'>Cargo</InputLabel>
-              <Input
-              required
-              value={cargoFuncionario}
-              onChange={handleSetCargoFuncionario}
-              id='cargo-funcionario'
-              className={styles.input}
-              />
-            </FormControl>
-
-            <FormControl>
-              <InputLabel htmlFor='salario-funcionario'>Salario</InputLabel>
-              <Input
-              required
-              value={salarioFuncionario}
-              onChange={handleSetSalarioFuncionario}
-              id='salario-funcionario'
-              className={styles.input}
-              type='number'
-              />
-            </FormControl>
-          </Grid>
-        </Grid>
+        </Box>
 
         <Button
         variant='contained'

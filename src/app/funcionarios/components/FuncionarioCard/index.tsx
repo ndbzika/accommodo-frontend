@@ -19,7 +19,7 @@ export const FuncionarioCard = ({ nome = '', email ='', cargo='', id=null }: Fun
   const {isOpen, handleOpenModal, handleCloseModal} = useModal();
 
   return (
-    <>
+    <Box className={styles.cardContainer}>
       <Image
       src='/funcionario.jpg'
       alt='funcionario photo'
@@ -60,6 +60,6 @@ export const FuncionarioCard = ({ nome = '', email ='', cargo='', id=null }: Fun
       <Modal open={isOpen} onClose={handleCloseModal}>
         <FuncionarioForm action='Atualizar' id={id}/>
       </Modal>
-    </>
+    </Box>
   )
 }
