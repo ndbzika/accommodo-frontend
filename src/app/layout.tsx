@@ -1,5 +1,4 @@
 import { Navbar } from '../components/Navbar'
-import { Title } from '../components/Title'
 import Providers from './providers'
 
 import '../../styles/global.scss'
@@ -19,7 +18,6 @@ export default function RootLayout({
       <body>
         <Providers>
           <Navbar/>
-          <Title />
           {children}
         </Providers>
       </body>
