@@ -1,12 +1,31 @@
 .container {
-  width: 500px;
+  width: 500px !important;
   margin: 0 auto;
   margin-top: 7em;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: 10%;
-  justify-content: center;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: #252525;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  .quartoTitle {
+    color: #fff;
+    padding: 0.5em;
+  }
+
+  .quartoData {
+    color: #fff;
+    font-size: 1.1em;
+  }
+
+  .buttons {
+    margin: 1em;
+    display: flex;
+    gap: 10px;
+  }
 }
 
 .modal {

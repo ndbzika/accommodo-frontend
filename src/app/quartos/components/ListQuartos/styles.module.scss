@@ -1,11 +1,8 @@
 .container {
-  margin: 30px;
+  width: 100vw !important;
+  margin-top: 5em;
+}
 
-  display: grid;
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: center;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
-  row-gap: 50px;
+.centerDiv {
+  margin: 0 auto;
 }

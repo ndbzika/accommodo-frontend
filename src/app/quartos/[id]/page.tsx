@@ -43,30 +43,30 @@ export default function Page({ params }: PageProps) {
   });
 
   return (
-    <Container className={styles.container}>
+    <Container className={styles.container} component='main'>
       <Image src='/quarto.jpg' alt='quarto de hotel' width='500' height='300'/>
 
 
-      <Typography variant='h3'>
+      <Typography component='h2' variant='h3' className={styles.quartoTitle}>
         Quarto n° {data?.numero}
       </Typography>
 
 
-      <Box>
-        <Typography>STATUS: {data?.status}</Typography>
-        <Typography>TIPO: {data?.tipo}</Typography>
-        <Typography>VALOR: R${data?.preco},00</Typography>
+      <Box component='section'>
+        <Typography className={styles.quartoData}>STATUS: {data?.status}</Typography>
+        <Typography className={styles.quartoData}>TIPO: {data?.tipo}</Typography>
+        <Typography className={styles.quartoData}>VALOR: R${data?.preco},00</Typography>
       </Box>
 
-      <Box flexDirection='row'>
-        <DeleteButton 
-        id={Number(data?.id)}
-        onClick={handleDeleteData}
-        />
-
+      <Box flexDirection='row' className={styles.buttons}>
         <UpdateButton
         id={Number(data?.id)}
         onClick={handleOpenModal}
+        />
+
+        <DeleteButton 
+        id={Number(data?.id)}
+        onClick={handleDeleteData}
         />
 
         <Modal open={isOpen} onClose={handleCloseModal}>
