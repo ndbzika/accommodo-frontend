@@ -1,3 +1,33 @@
+.table {
+  margin-top: 5em;
+}
+
+.cellHead {
+  background-color: #252525;
+  color: #fff !important;
+  font-size: 1.2em !important;
+}
+
+.cellBody {
+  color: #fff !important;
+}
+
+.rowBody:nth-of-type(odd) {
+  font-size: 1.1em;
+  background-color: #6098ff;
+}
+
+.rowBody:nth-of-type(even) {
+  background-color: #387dff;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
 .modal {
   position: absolute;
   top: 50%;

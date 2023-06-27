@@ -42,6 +42,7 @@ export const HospedeModal = () => {
         required
         id='outlined-controlled'
         label='Telefone'
+        placeholder='(xx) xxxx-xxxx'
         value={telefoneHospede}
         onChange={handleSetTelefoneHospede}
         />

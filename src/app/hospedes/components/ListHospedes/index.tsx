@@ -38,11 +38,11 @@ export const ListHospedes = () => {
 
           <TableHead>
             <TableRow>
-              <TableCell>ID</TableCell>
-              <TableCell>Nome</TableCell>
-              <TableCell>Email</TableCell>
-              <TableCell>Telefone</TableCell>
-              <TableCell align='center'>Ações</TableCell>
+              <TableCell className={styles.cellHead}>ID</TableCell>
+              <TableCell className={styles.cellHead}>Nome</TableCell>
+              <TableCell className={styles.cellHead}>Email</TableCell>
+              <TableCell className={styles.cellHead}>Telefone</TableCell>
+              <TableCell align='center' className={styles.cellHead}>Ações</TableCell>
             </TableRow>
           </TableHead>
 
@@ -50,13 +50,13 @@ export const ListHospedes = () => {
             {Array.isArray(data) &&
             data.map((hospede: HospedeData) => (
               <>
-                <TableRow key={hospede.id}>
-                  <TableCell component='th' scope='row'>{hospede.id}</TableCell>
-                  <TableCell>{hospede.nome}</TableCell>
-                  <TableCell>{hospede.email}</TableCell>
-                  <TableCell>{hospede.telefone}</TableCell>
-                  <TableCell align='center'>
-                    <>
+                <TableRow key={hospede.id} className={styles.rowBody}>
+                  <TableCell component='th' scope='row' className={styles.cellBody}>{hospede.id}</TableCell>
+                  <TableCell className={styles.cellBody}>{hospede.nome}</TableCell>
+                  <TableCell className={styles.cellBody}>{hospede.email}</TableCell>
+                  <TableCell className={styles.cellBody}>{hospede.telefone}</TableCell>
+                  <TableCell align='center' className={styles.cellBody}>
+                    <Box className={styles.actions}>
                       <UpdateButton id={Number(hospede.id)}
                       onClick={handleOpenModal} 
                       />
@@ -67,7 +67,7 @@ export const ListHospedes = () => {
                         handleDeleteData()
                       }}
                       />
-                    </>
+                    </Box>
                   </TableCell>
                 </TableRow>
                   <Modal open={isOpen} onClose={handleCloseModal}>
