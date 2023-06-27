@@ -17,3 +17,16 @@
     transform: translate(-50%, -50%) !important;
   }
 }
+
+@media (width < 1090px) {
+  .body {
+    flex-direction: column !important;
+    margin: 0 auto;
+  }
+}
+
+@media (width < 800px) {
+  .body {
+    transform: scale(0.7);
+  }
+}

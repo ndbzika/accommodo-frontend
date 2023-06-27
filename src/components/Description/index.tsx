@@ -8,16 +8,16 @@ import Link from 'next/link'
 
 export const Description = () => {
   return (
-    <Box>
+    <Box component='main'>
       <Title />
 
-      <Typography 
+      <Box 
       component='p' 
       className={styles.description}
       >
-        O melhor sistema de gerenciamento de hotéis da America Latina!
-        A melhor escolha para sua empresa e para seus funcionários.
-        Adquira já para seu negócio, fale com nossa equipe:  
+        O melhor sistema de gerenciamento de hotéis da America Latina.
+        Faça a melhor escolha para sua empresa e para seus funcionários,
+        adquira já para seu negócio, fale com nossa equipe:  
         <Typography component='span'>
           <Link 
           href='https://www.linkedin.com/in/flaviohenriquedev/'
@@ -27,7 +27,7 @@ export const Description = () => {
             Linkedin
           </Link>
         </Typography>
-      </Typography>
+      </Box>
     </Box>
   )
 }
